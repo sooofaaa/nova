@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 136, in script
+    scene bg room3 lamp
+Exception: Image 'bg room3' does not accept attributes 'lamp'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 136, in script
+    scene bg room3 lamp
+  File "renpy/ast.py", line 1562, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1398, in show_imspec
+    atl=atl)
+  File "renpy/exports.py", line 733, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "renpy/display/image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "renpy/display/displayable.py", line 246, in _duplicate
+    args.extraneous()
+  File "renpy/display/displayable.py", line 111, in extraneous
+    " ".join(self.args),
+Exception: Image 'bg room3' does not accept attributes 'lamp'.
+
+Windows-10-10.0.19041 AMD64
+Ren'Py 7.7.0.23072102+nightly
+Вселицио 1.0
+Sun Jul 30 23:06:10 2023
